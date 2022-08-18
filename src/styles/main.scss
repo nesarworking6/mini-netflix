@@ -1,0 +1,19 @@
+@import "variables";
+
+// flex gap
+$gap-sm: 0.5rem;
+$gap-md: 1rem;
+$gap-lg: 2rem;
+$flex-gaps: (
+  "sm": $gap-sm,
+  "md": $gap-md,
+  "lg": $gap-lg,
+);
+
+.flex-gap {
+  @each $name, $size in $flex-gaps {
+    &-#{$name} {
+      gap: $size;
+    }
+  }
+}
